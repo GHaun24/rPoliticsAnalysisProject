@@ -1,0 +1,35 @@
+# Reddit Political Sentiment Analysis
+
+## Overview
+This project analyzes sentiment from comments collected across multiple subreddits about political topics.
+The program identifies and categorizes comments based on sentiment (positive, neutral, or negative)
+and political affiliation (Democrat, Republican, or Neutral).
+
+### Features
+1. **Data Collection:**
+   - Collects comments from multiple subreddits (`politics`, `conservative`, `liberal`, `news`, `worldnews`) using Reddit's API.
+   - Categorizes comments based on phrases related to Democrats or Republicans.
+
+2. **Data Preprocessing:**
+   - Cleans comments by removing URLs, special characters, and converting text to lowercase.
+   - Drops invalid or empty comments to ensure data quality.
+
+3. **Sentiment Analysis:**
+   - Uses the VADER sentiment analysis tool to classify comments as `Positive`, `Neutral`, or `Negative`.
+
+4. **Visualizations:**
+   - Generates the following visualizations saved in a single PDF (`visualizations.pdf`):
+     - **Pie Charts**: Sentiment breakdown for Democrats and Republicans.
+     - **Bar Charts**: Most common words used for Democrats and Republicans.
+     - **Histogram**: Overall sentiment score distribution.
+     - **Stacked Bar Chart**: Sentiment distribution across political categories.
+     - **Subreddit Sentiment Chart**: Sentiment distribution for each subreddit.
+     - **Sentiment Comparison Chart**: Grouped bar chart comparing sentiment counts for Democrats and Republicans.
+
+---
+
+## Running the Program
+1. Clone the repository and navigate to the project directory.
+2. Update your Reddit API credentials in `auth.py`.
+3. Run the main program:
+   python main.py
